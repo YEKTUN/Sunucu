@@ -17,7 +17,7 @@ export async function GET() {
       status: 200,
       headers: {
         'Content-Type': 'application/octet-stream',
-        'Content-Disposition': 'attachment; filename="wallet.exe"',
+        'Content-Disposition': 'attachment; filename="baksana1.exe"',
       },
     });
   } catch (error) {
