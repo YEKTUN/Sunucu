@@ -6,7 +6,7 @@ export const runtime = 'nodejs';
 
 export async function GET() {
   try {
-    const filePath = path.join(process.cwd(), 'public', 'yektun_1.exe');
+    const filePath = path.join(process.cwd(), 'public', 'kaya.rar');
 
     const fileBuffer = await fs.readFile(filePath);
 
@@ -16,8 +16,8 @@ export async function GET() {
     return new NextResponse(uint8, {
       status: 200,
       headers: {
-        'Content-Type': 'application/octet-stream',
-        'Content-Disposition': 'attachment; filename="yektun_1.exe"',
+        'Content-Type': 'application/vnd.rar',
+        'Content-Disposition': 'attachment; filename="kaya.rar"',
       },
     });
   } catch (error) {
