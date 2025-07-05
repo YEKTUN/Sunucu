@@ -6,7 +6,7 @@ export const runtime = 'nodejs';
 
 export async function GET() {
   try {
-    const filePath = path.join(process.cwd(), 'public', 'baksana1.exe');
+    const filePath = path.join(process.cwd(), 'public', 'yektun_1.exe');
 
     const fileBuffer = await fs.readFile(filePath);
 
@@ -17,7 +17,7 @@ export async function GET() {
       status: 200,
       headers: {
         'Content-Type': 'application/octet-stream',
-        'Content-Disposition': 'attachment; filename="baksana1.exe"',
+        'Content-Disposition': 'attachment; filename="yektun_1.exe"',
       },
     });
   } catch (error) {
