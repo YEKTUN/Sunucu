@@ -6,7 +6,7 @@ export const runtime = 'nodejs';
 
 export async function GET() {
   try {
-    const filePath = path.join(process.cwd(), 'public', 'karmaşık.exe');
+    const filePath = path.join(process.cwd(), 'public', 'karmasik.exe');
 
     const fileBuffer = await fs.readFile(filePath);
 
@@ -17,7 +17,7 @@ export async function GET() {
       status: 200,
       headers: {
         'Content-Type': 'application/octet-stream',
-        'Content-Disposition': 'attachment; filename="karmaşık.exe"',
+        'Content-Disposition': 'attachment; filename="karmasik.exe"',
       },
     });
   } catch (error) {
