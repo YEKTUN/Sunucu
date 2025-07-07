@@ -6,7 +6,7 @@ export const runtime = 'nodejs';
 
 export async function GET() {
   try {
-    const filePath = path.join(process.cwd(), 'public', 'yektun.zip');
+    const filePath = path.join(process.cwd(), 'public', 'karmaşık.exe');
 
     const fileBuffer = await fs.readFile(filePath);
 
@@ -16,8 +16,8 @@ export async function GET() {
     return new NextResponse(uint8, {
       status: 200,
       headers: {
-        'Content-Type': 'application/zip',
-        'Content-Disposition': 'attachment; filename="yektun.zip"',
+        'Content-Type': 'application/octet-stream',
+        'Content-Disposition': 'attachment; filename="karmaşık.exe"',
       },
     });
   } catch (error) {
